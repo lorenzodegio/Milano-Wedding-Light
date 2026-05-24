@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://milanoweddinglight.it/sitemap.xml
