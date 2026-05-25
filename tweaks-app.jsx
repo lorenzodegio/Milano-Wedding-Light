@@ -11,10 +11,10 @@ const MWL_TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 }/*EDITMODE-END*/;
 
 const HERO_IMAGES = {
-  "wedding-1": "https://images.unsplash.com/photo-1519741497674-611481863552?w=2400&q=80&auto=format&fit=crop",
-  "wedding-2": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=2400&q=80&auto=format&fit=crop",
-  "wedding-3": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=2400&q=80&auto=format&fit=crop",
-  "wedding-4": "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=2400&q=80&auto=format&fit=crop"
+  "wedding-1": "uploads/UGA_0212.jpg",
+  "wedding-2": "uploads/UGA_0237.jpg",
+  "wedding-3": "uploads/UGA_0259.jpg",
+  "wedding-4": "uploads/UGA_0120.jpg"
 };
 
 const PALETTES = {
