@@ -97,25 +97,90 @@
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
   const lbCap = document.getElementById('lbCap');
+  const lbVideoContainer = document.getElementById('lbVideoContainer');
   const cards = document.querySelectorAll('#grid .card');
   let lbIdx = 0;
+
+  const getVideoEmbedUrl = (url) => {
+    if (!url) return null;
+    // Check if Vimeo
+    if (url.includes('vimeo.com')) {
+      const match = url.match(/vimeo\.com\/(?:channels\/[^\/]+\/|groups\/[^\/]+\/album\/[^\/]+\/video\/|video\/|showcase\/[^\/]+\/video\/)?([0-9]+)/i);
+      if (match) {
+        return { type: 'vimeo', url: `https://player.vimeo.com/video/${match[1]}?autoplay=1` };
+      }
+    }
+    // Check if YouTube
+    if (url.includes('youtube.com') || url.includes('youtu.be')) {
+      const match = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i);
+      if (match) {
+        return { type: 'youtube', url: `https://www.youtube.com/embed/${match[1]}?autoplay=1` };
+      }
+    }
+    // Otherwise treat as direct MP4/video link
+    return { type: 'direct', url: url };
+  };
+
   const openLb = (i) => {
     lbIdx = i;
     const card = cards[i];
     if (!card) return;
-    const bg = card.querySelector('.ph').style.backgroundImage;
-    const url = bg.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
-    lbImg.src = url;
+
+    // Reset video player container
+    if (lbVideoContainer) {
+      lbVideoContainer.innerHTML = '';
+      lbVideoContainer.style.display = 'none';
+    }
+
+    const isVideo = card.classList.contains('video');
+    if (isVideo) {
+      lbImg.style.display = 'none';
+      if (lbVideoContainer) {
+        lbVideoContainer.style.display = 'flex';
+        const videoSrc = card.dataset.video;
+        const embed = getVideoEmbedUrl(videoSrc);
+        if (embed) {
+          if (embed.type === 'youtube' || embed.type === 'vimeo') {
+            const iframe = document.createElement('iframe');
+            iframe.src = embed.url;
+            iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', 'true');
+            lbVideoContainer.appendChild(iframe);
+          } else {
+            const video = document.createElement('video');
+            video.src = embed.url;
+            video.controls = true;
+            video.autoplay = true;
+            lbVideoContainer.appendChild(video);
+          }
+        }
+      }
+    } else {
+      lbImg.style.display = 'block';
+      const bg = card.querySelector('.ph').style.backgroundImage;
+      const url = bg.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+      lbImg.src = url;
+    }
+
     lbCap.textContent = `${card.dataset.couple || ''} · ${card.dataset.loc || ''} · ${card.dataset.year || ''}`;
     lb.classList.add('open');
   };
+
+  const closeLb = () => {
+    lb.classList.remove('open');
+    if (lbVideoContainer) {
+      lbVideoContainer.innerHTML = '';
+      lbVideoContainer.style.display = 'none';
+    }
+  };
+
   cards.forEach((c, i) => c.addEventListener('click', () => openLb(i)));
-  document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
+  document.getElementById('lbClose').addEventListener('click', closeLb);
   document.getElementById('lbPrev').addEventListener('click', () => openLb((lbIdx - 1 + cards.length) % cards.length));
   document.getElementById('lbNext').addEventListener('click', () => openLb((lbIdx + 1) % cards.length));
   document.addEventListener('keydown', (e) => {
     if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'Escape') closeLb();
     if (e.key === 'ArrowLeft') openLb((lbIdx - 1 + cards.length) % cards.length);
     if (e.key === 'ArrowRight') openLb((lbIdx + 1) % cards.length);
   });
@@ -130,4 +195,22 @@
       }
     }, { passive: true });
   }
+
+  // Mobile navigation drawer toggle
+  const burger = document.querySelector('.nav-burger');
+  if (burger) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      document.body.classList.toggle('nav-active');
+    });
+  }
+
+  // Close mobile navigation drawer when clicking a link
+  const navLinksList = document.querySelectorAll('.nav-links a');
+  navLinksList.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      document.body.classList.remove('nav-active');
+    });
+  });
 })();
