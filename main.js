@@ -162,7 +162,7 @@
       lbImg.src = url;
     }
 
-    lbCap.textContent = `${card.dataset.couple || ''} · ${card.dataset.loc || ''} · ${card.dataset.year || ''}`;
+    lbCap.textContent = '';
     lb.classList.add('open');
   };
 
