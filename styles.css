@@ -537,6 +537,30 @@ section { position: relative; }
 .service .feats li strong { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 400; color: var(--champagne); }
 .service .price { display: none; }
 .service .index { position: absolute; bottom: 24px; right: 32px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 64px; color: rgba(255,255,255,0.07); line-height: 1; }
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-top: 32px;
+  font-weight: 400;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.service-cta:hover {
+  color: #fff;
+}
+.service-cta .arrow {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.service-cta:hover .arrow {
+  transform: translateX(4px);
+}
 
 /* ─── Testimonials ──────────────────────────────────── */
 .testimonials { background: var(--ivory-2); overflow: hidden; }

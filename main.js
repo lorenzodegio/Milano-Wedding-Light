@@ -213,4 +213,18 @@
       document.body.classList.remove('nav-active');
     });
   });
+
+  // Pre-fill contact form on service selection
+  const serviceCtas = document.querySelectorAll('.service-cta');
+  const contactSelect = document.getElementById('contactSelect');
+  if (serviceCtas && contactSelect) {
+    serviceCtas.forEach(cta => {
+      cta.addEventListener('click', () => {
+        const val = cta.getAttribute('data-service');
+        if (val) {
+          contactSelect.value = val;
+        }
+      });
+    });
+  }
 })();
