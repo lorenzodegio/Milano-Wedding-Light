@@ -242,4 +242,21 @@
       });
     });
   }
+
+  // Pre-fill checkboxes on partner selection
+  const partnerCtas = document.querySelectorAll('.partner-cta');
+  const interestDJ = document.getElementById('interestDJ');
+  const interestBomboniere = document.getElementById('interestBomboniere');
+  if (partnerCtas) {
+    partnerCtas.forEach(cta => {
+      cta.addEventListener('click', () => {
+        const partner = cta.getAttribute('data-partner');
+        if (partner === 'dj' && interestDJ) {
+          interestDJ.checked = true;
+        } else if (partner === 'bomboniere' && interestBomboniere) {
+          interestBomboniere.checked = true;
+        }
+      });
+    });
+  }
 })();

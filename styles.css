@@ -838,34 +838,93 @@ footer {
   line-height: 1.7;
   margin-bottom: 32px;
 }
-.partner-details {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-size: 12px;
-  border-top: 1px dashed rgba(255,255,255,0.08);
-  padding-top: 24px;
-}
-.partner-details .row {
-  display: flex;
-  justify-content: space-between;
+.partner-card .partner-cta {
+  display: inline-flex;
   align-items: center;
-}
-.partner-details .row span {
-  color: rgba(255,255,255,0.5);
-}
-.partner-details .row strong {
-  font-weight: 400;
-  color: var(--ivory);
-}
-.partner-details .row a {
-  color: var(--champagne);
+  gap: 8px;
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--champagne);
+  color: #0F0F10;
+  padding: 12px 22px;
+  font-weight: 500;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 8px;
 }
-.partner-details .row a:hover {
-  border-bottom-color: var(--champagne);
+.partner-card .partner-cta:hover {
+  background: #ffffff;
+  color: #0F0F10;
+}
+.partner-card .partner-cta .arrow {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.partner-card .partner-cta:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Stylish Checkboxes */
+.stylish-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  user-select: none;
+  position: relative;
+}
+.stylish-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.stylish-checkbox .checkbox-box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.02);
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.stylish-checkbox:hover .checkbox-box {
+  border-color: var(--champagne);
+  background: rgba(200,169,126,0.05);
+}
+.stylish-checkbox input:checked ~ .checkbox-box {
+  background: var(--champagne);
+  border-color: var(--champagne);
+}
+.stylish-checkbox .checkbox-box::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid #0F0F10;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.stylish-checkbox input:checked ~ .checkbox-box::after {
+  display: block;
+}
+.stylish-checkbox .checkbox-label {
+  transition: color 0.3s ease;
+}
+.stylish-checkbox:hover .checkbox-label {
+  color: #ffffff;
+}
+.stylish-checkbox input:checked ~ .checkbox-label {
+  color: var(--champagne);
 }
 
 @media (max-width: 768px) {
