@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio — MWL Milano Wedding Light</title>
+<meta name="description" content="Sfoglia la galleria estesa dei lavori realizzati da MWL. Fotografie e film matrimoniali spontanei, raffinati e senza tempo."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italianno&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-label" id="cursorLabel">Vedi</div>
+
+<!-- Nav -->
+<nav class="nav solid" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html#top" class="nav-logo" aria-label="MWL">
+      <svg viewBox="0 0 200 60" fill="none" aria-hidden="true">
+        <g transform="translate(28 30)">
+          <circle r="22" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"></circle>
+          <g fill="currentColor">
+            <path d="M0 -19 L13 -12 L10 -3 L-1 -4 Z"></path>
+            <path d="M13 -12 L19 2 L11 7 L4 -1 Z"></path>
+            <path d="M19 2 L12 16 L4 12 L7 3 Z"></path>
+            <path d="M12 16 L-3 18 L-6 10 L2 8 Z"></path>
+            <path d="M-3 18 L-17 9 L-12 2 L-4 6 Z"></path>
+            <path d="M-17 9 L-19 -6 L-11 -8 L-8 0 Z"></path>
+            <path d="M-19 -6 L-9 -17 L-3 -12 L-8 -4 Z"></path>
+            <path d="M-9 -17 L4 -19 L6 -11 L-1 -9 Z"></path>
+          </g>
+          <g fill="currentColor" transform="translate(0 -3)">
+            <path d="M-12 2 L-12 -4 L-10 -4 L-10 -8 L-8 -8 L-8 -4 L-6 -4 L-6 -9 L-4 -12 L-2 -9 L-2 -5 L0 -5 L0 -11 L2 -14 L4 -11 L4 -5 L6 -5 L6 -3 L9 -3 L9 2 Z"></path>
+          </g>
+        </g>
+        <text x="62" y="36" font-family="'Cormorant Garamond', serif" font-weight="500" font-size="26" letter-spacing="5" fill="currentColor">M W L</text>
+        <text x="62" y="50" font-family="'Italianno', cursive" font-size="13" fill="currentColor" opacity="0.7">Milano wedding light</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#about">Studio</a>
+      <a href="index.html#services">Servizi</a>
+      <a href="index.html#testimonials">Storie</a>
+      <a href="index.html#instagram">Instagram</a>
+    </div>
+    <a class="nav-cta" href="index.html#contact"><span>Preventivo</span></a>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header section-pad" style="background: var(--paper); color: var(--ink); text-align: center; padding-top: 180px; padding-bottom: 64px;">
+  <div class="container">
+    <div class="numbered" style="justify-content: center; margin-bottom: 24px;">
+      <span class="num" style="color: var(--champagne-deep)">MWL</span>
+      <span class="dash" style="background: var(--line);"></span>
+      <span class="label">Galleria Estesa</span>
+    </div>
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; line-height: 1.1; margin-bottom: 24px;">
+      Tutti i nostri <em>lavori</em>
+    </h1>
+    <p style="font-family: 'Jost', sans-serif; font-size: 14px; color: var(--stone); max-width: 540px; margin: 0 auto; line-height: 1.8;">
+      Uno sguardo approfondito sul nostro archivio visivo. Ogni scatto e ogni sequenza cinematografica racchiudono la luce naturale, le emozioni spontanee e i dettagli preziosi del vostro giorno più bello.
+    </p>
+  </div>
+</header>
+
+<!-- Portfolio Grid Section -->
+<section class="portfolio" id="portfolio-archive" style="background: var(--paper); color: var(--ink); padding-bottom: 120px;">
+  <div class="container">
+    <div class="filter-bar reveal in">
+      <div class="filters" id="filters">
+        <button class="active" data-filter="all">Tutti <span class="count">11</span></button>
+        <button data-filter="foto">Foto <span class="count">10</span></button>
+        <button data-filter="video">Video <span class="count">01</span></button>
+        <button data-filter="wedding">Wedding <span class="count">08</span></button>
+        <button data-filter="engagement">Engagement <span class="count">03</span></button>
+      </div>
+    </div>
+
+    <div class="grid reveal in" id="grid">
+      <!-- 01 Sofia & Lorenzo -->
+      <article class="card s-7" data-tags="foto wedding" data-couple="Sofia &amp; Lorenzo" data-loc="Villa d'Este · Lago di Como" data-year="2026">
+        <div class="ph" style="background-image: url('uploads/UGA_0116.jpg');"></div>
+        <span class="badge">Foto</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 02 Bianca & Tommaso -->
+      <article class="card s-5 video" data-tags="video wedding" data-video="uploads/01 Sposi_audio.mov" data-couple="Bianca &amp; Tommaso" data-loc="Villa Erba · Cernobbio" data-year="2025">
+        <div class="ph" style="background-image: url('uploads/D_1173.jpg');"></div>
+        <span class="badge video">Film 04:32</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 03 Marta & Edoardo -->
+      <article class="card s-4" data-tags="foto engagement" data-couple="Marta &amp; Edoardo" data-loc="Galleria · Milano" data-year="2026">
+        <div class="ph" style="background-image: url('uploads/UGA_0194.jpg');"></div>
+        <span class="badge">Engagement</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 04 Camilla & Niccolò -->
+      <article class="card s-4" data-tags="foto wedding" data-couple="Camilla &amp; Niccolò" data-loc="Borgo Egnazia · Puglia" data-year="2025">
+        <div class="ph" style="background-image: url('uploads/UGA_0178.jpg');"></div>
+        <span class="badge">Foto</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 05 Elena & Riccardo -->
+      <article class="card s-4" data-tags="foto wedding" data-couple="Elena &amp; Riccardo" data-loc="Castello di Vincigliata · Firenze" data-year="2025">
+        <div class="ph" style="background-image: url('uploads/UGA_0056.jpg');"></div>
+        <span class="badge">Foto</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 06 Greta & Filippo -->
+      <article class="card s-12" data-tags="foto wedding" data-couple="Greta &amp; Filippo" data-loc="Costiera Amalfitana · Ravello" data-year="2024">
+        <div class="ph" style="background-image: url('uploads/UGA_0259.jpg');"></div>
+        <span class="badge">Foto</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 07 Alice & Matteo -->
+      <article class="card s-3" data-tags="foto engagement" data-couple="Alice &amp; Matteo" data-loc="Brera · Milano" data-year="2026">
+        <div class="ph" style="background-image: url('uploads/UGA_0621.jpg');"></div>
+        <span class="badge">Engagement</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 08 Chiara & Davide -->
+      <article class="card s-3" data-tags="foto wedding" data-couple="Chiara &amp; Davide" data-loc="Villa Balbianello · Lenno" data-year="2025">
+        <div class="ph" style="background-image: url('uploads/UGA_0731.jpg');"></div>
+        <span class="badge">Foto</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 09 Vittoria & Andrea -->
+      <article class="card s-6" data-tags="foto engagement" data-couple="Vittoria &amp; Andrea" data-loc="Madonna di Campiglio" data-year="2025">
+        <div class="ph" style="background-image: url('uploads/UGA_0073.jpg');"></div>
+        <span class="badge">Engagement</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 10 Beatrice & Luca -->
+      <article class="card s-3" data-tags="foto wedding" data-couple="Beatrice &amp; Luca" data-loc="Castello Odescalchi · Bracciano" data-year="2024">
+        <div class="ph" style="background-image: url('uploads/UGA_0305.jpg');"></div>
+        <span class="badge">Foto</span>
+        <div class="veil"></div>
+      </article>
+      <!-- 11 Aurora & Stefano -->
+      <article class="card s-3" data-tags="foto wedding" data-couple="Aurora &amp; Stefano" data-loc="Villa Necchi Campiglio · Milano" data-year="2026">
+        <div class="ph" style="background-image: url('uploads/UGA_0688.jpg');"></div>
+        <span class="badge">Foto</span>
+        <div class="veil"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-logo">
+        <svg viewBox="0 0 240 280" fill="none" style="color: var(--ivory)">
+          <rect x="0" y="0" width="240" height="14" fill="currentColor"/>
+          <g fill="var(--ink)">
+            <rect x="6" y="3" width="8" height="8"/><rect x="22" y="3" width="8" height="8"/><rect x="38" y="3" width="8" height="8"/><rect x="54" y="3" width="8" height="8"/><rect x="70" y="3" width="8" height="8"/><rect x="86" y="3" width="8" height="8"/><rect x="102" y="3" width="8" height="8"/><rect x="118" y="3" width="8" height="8"/><rect x="134" y="3" width="8" height="8"/><rect x="150" y="3" width="8" height="8"/><rect x="166" y="3" width="8" height="8"/><rect x="182" y="3" width="8" height="8"/><rect x="198" y="3" width="8" height="8"/><rect x="214" y="3" width="8" height="8"/>
+          </g>
+          <rect x="0" y="266" width="240" height="14" fill="currentColor"/>
+          <g fill="var(--ink)">
+            <rect x="6" y="269" width="8" height="8"/><rect x="22" y="269" width="8" height="8"/><rect x="38" y="269" width="8" height="8"/><rect x="54" y="269" width="8" height="8"/><rect x="70" y="269" width="8" height="8"/><rect x="86" y="269" width="8" height="8"/><rect x="102" y="269" width="8" height="8"/><rect x="118" y="269" width="8" height="8"/><rect x="134" y="269" width="8" height="8"/><rect x="150" y="269" width="8" height="8"/><rect x="166" y="269" width="8" height="8"/><rect x="182" y="269" width="8" height="8"/><rect x="198" y="269" width="8" height="8"/><rect x="214" y="269" width="8" height="8"/>
+          </g>
+          <g transform="translate(120 96)">
+            <circle r="32" fill="none" stroke="#C8A97E" stroke-width="1"/>
+            <g fill="currentColor">
+              <path d="M0 -29 L20 -19 L15 -5 L-2 -7 Z"/>
+              <path d="M20 -19 L29 3 L17 10 L7 -1 Z"/>
+              <path d="M29 3 L19 24 L7 19 L10 5 Z"/>
+              <path d="M19 24 L-5 27 L-9 15 L3 12 Z"/>
+              <path d="M-5 27 L-26 14 L-19 3 L-7 8 Z"/>
+              <path d="M-26 14 L-29 -8 L-17 -12 L-12 0 Z"/>
+              <path d="M-29 -8 L-13 -25 L-5 -19 L-12 -7 Z"/>
+              <path d="M-13 -25 L7 -29 L8 -17 L-2 -14 Z"/>
+            </g>
+            <g fill="currentColor" transform="translate(0 -6)">
+              <path d="M-18 4 L-18 -7 L-15 -7 L-15 -12 L-12 -12 L-12 -7 L-9 -7 L-9 -14 L-5 -19 L-1 -14 L-1 -9 L2 -9 L2 -17 L6 -22 L9 -17 L9 -9 L12 -9 L12 -5 L16 -5 L16 4 Z"/>
+            </g>
+          </g>
+          <text x="120" y="180" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="500" font-size="44" letter-spacing="10" fill="currentColor">M W L</text>
+          <text x="120" y="208" text-anchor="middle" font-family="'Italianno', cursive" font-size="22" fill="#C8A97E">Milano wedding light</text>
+          <text x="120" y="238" text-anchor="middle" font-family="'Jost', sans-serif" font-size="14" letter-spacing="4" fill="currentColor">Foto&amp;Video</text>
+        </svg>
+        <p class="foot-tag">Raccontiamo emozioni senza tempo — dal 2017, in tutta Italia.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="index.html#about">Chi siamo</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#services">Servizi</a></li>
+          <li><a href="index.html#contact">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Servizi</h4>
+        <ul>
+          <li><a href="index.html#services">Wedding Photography</a></li>
+          <li><a href="index.html#services">Wedding Film</a></li>
+          <li><a href="index.html#services">Drone</a></li>
+          <li><a href="index.html#services">Love Story</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contatti</h4>
+        <ul>
+          <li><a href="mailto:milanoweddinglight@gmail.com">milanoweddinglight@gmail.com</a></li>
+          <li><a href="https://wa.me/393475184336">+39 347 518 4336</a></li>
+          <li><a href="https://instagram.com/mwl_milanoweddinglight" target="_blank" rel="noopener">@mwl_milanoweddinglight</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 MWL · Milano Wedding Light — P.IVA 12345670158</span>
+      <span>Privacy · Cookie · Credits</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="close" id="lbClose">Chiudi</button>
+  <button class="nav-arrow prev" id="lbPrev">← Prec</button>
+  <button class="nav-arrow next" id="lbNext">Succ →</button>
+  <div class="lb-content">
+    <img class="lb-img" id="lbImg" alt=""/>
+    <div class="lb-video-container" id="lbVideoContainer" style="display: none;"></div>
+  </div>
+  <div class="caption" id="lbCap"></div>
+</div>
+
+<!-- Grain overlay -->
+<div class="grain" id="grain"></div>
+
+<!-- Main interactions -->
+<script src="main.js"></script>
+
+</body>
+</html>
