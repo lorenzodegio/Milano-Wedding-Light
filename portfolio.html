@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Portfolio — MWL Milano Wedding Light</title>
-<meta name="description" content="Sfoglia la galleria estesa dei lavori realizzati da MWL. Fotografie e film matrimoniali spontanei, raffinati e senza tempo."/>
+<title>Portfolio Completo — MWL Milano Wedding Light</title>
+<meta name="description" content="Sfoglia la galleria estesa con tutti i lavori realizzati da MWL. Reportage di matrimonio e film spontanei e senza tempo."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italianno&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
@@ -66,7 +66,7 @@
       Tutti i nostri <em>lavori</em>
     </h1>
     <p style="font-family: 'Jost', sans-serif; font-size: 14px; color: var(--stone); max-width: 540px; margin: 0 auto; line-height: 1.8;">
-      Uno sguardo approfondito sul nostro archivio visivo. Ogni scatto e ogni sequenza cinematografica racchiudono la luce naturale, le emozioni spontanee e i dettagli preziosi del vostro giorno più bello.
+      Benvenuti nel nostro archivio completo. Qui sono raccolti tutti gli scatti e le riprese dello studio: ogni immagine racconta una luce unica e un'emozione catturata nel tempo.
     </p>
   </div>
 </header>
@@ -76,81 +76,16 @@
   <div class="container">
     <div class="filter-bar reveal in">
       <div class="filters" id="filters">
-        <button class="active" data-filter="all">Tutti <span class="count">11</span></button>
-        <button data-filter="foto">Foto <span class="count">10</span></button>
-        <button data-filter="video">Video <span class="count">01</span></button>
-        <button data-filter="wedding">Wedding <span class="count">08</span></button>
-        <button data-filter="engagement">Engagement <span class="count">03</span></button>
+        <button class="active" data-filter="all">Tutti <span class="count" id="count-all">00</span></button>
+        <button data-filter="foto">Foto <span class="count" id="count-foto">00</span></button>
+        <button data-filter="video">Video <span class="count" id="count-video">00</span></button>
+        <button data-filter="wedding">Wedding <span class="count" id="count-wedding">00</span></button>
+        <button data-filter="engagement">Engagement <span class="count" id="count-engagement">00</span></button>
       </div>
     </div>
 
     <div class="grid reveal in" id="grid">
-      <!-- 01 Sofia & Lorenzo -->
-      <article class="card s-7" data-tags="foto wedding" data-couple="Sofia &amp; Lorenzo" data-loc="Villa d'Este · Lago di Como" data-year="2026">
-        <div class="ph" style="background-image: url('uploads/UGA_0116.jpg');"></div>
-        <span class="badge">Foto</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 02 Bianca & Tommaso -->
-      <article class="card s-5 video" data-tags="video wedding" data-video="uploads/01 Sposi_audio.mov" data-couple="Bianca &amp; Tommaso" data-loc="Villa Erba · Cernobbio" data-year="2025">
-        <div class="ph" style="background-image: url('uploads/D_1173.jpg');"></div>
-        <span class="badge video">Film 04:32</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 03 Marta & Edoardo -->
-      <article class="card s-4" data-tags="foto engagement" data-couple="Marta &amp; Edoardo" data-loc="Galleria · Milano" data-year="2026">
-        <div class="ph" style="background-image: url('uploads/UGA_0194.jpg');"></div>
-        <span class="badge">Engagement</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 04 Camilla & Niccolò -->
-      <article class="card s-4" data-tags="foto wedding" data-couple="Camilla &amp; Niccolò" data-loc="Borgo Egnazia · Puglia" data-year="2025">
-        <div class="ph" style="background-image: url('uploads/UGA_0178.jpg');"></div>
-        <span class="badge">Foto</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 05 Elena & Riccardo -->
-      <article class="card s-4" data-tags="foto wedding" data-couple="Elena &amp; Riccardo" data-loc="Castello di Vincigliata · Firenze" data-year="2025">
-        <div class="ph" style="background-image: url('uploads/UGA_0056.jpg');"></div>
-        <span class="badge">Foto</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 06 Greta & Filippo -->
-      <article class="card s-12" data-tags="foto wedding" data-couple="Greta &amp; Filippo" data-loc="Costiera Amalfitana · Ravello" data-year="2024">
-        <div class="ph" style="background-image: url('uploads/UGA_0259.jpg');"></div>
-        <span class="badge">Foto</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 07 Alice & Matteo -->
-      <article class="card s-3" data-tags="foto engagement" data-couple="Alice &amp; Matteo" data-loc="Brera · Milano" data-year="2026">
-        <div class="ph" style="background-image: url('uploads/UGA_0621.jpg');"></div>
-        <span class="badge">Engagement</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 08 Chiara & Davide -->
-      <article class="card s-3" data-tags="foto wedding" data-couple="Chiara &amp; Davide" data-loc="Villa Balbianello · Lenno" data-year="2025">
-        <div class="ph" style="background-image: url('uploads/UGA_0731.jpg');"></div>
-        <span class="badge">Foto</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 09 Vittoria & Andrea -->
-      <article class="card s-6" data-tags="foto engagement" data-couple="Vittoria &amp; Andrea" data-loc="Madonna di Campiglio" data-year="2025">
-        <div class="ph" style="background-image: url('uploads/UGA_0073.jpg');"></div>
-        <span class="badge">Engagement</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 10 Beatrice & Luca -->
-      <article class="card s-3" data-tags="foto wedding" data-couple="Beatrice &amp; Luca" data-loc="Castello Odescalchi · Bracciano" data-year="2024">
-        <div class="ph" style="background-image: url('uploads/UGA_0305.jpg');"></div>
-        <span class="badge">Foto</span>
-        <div class="veil"></div>
-      </article>
-      <!-- 11 Aurora & Stefano -->
-      <article class="card s-3" data-tags="foto wedding" data-couple="Aurora &amp; Stefano" data-loc="Villa Necchi Campiglio · Milano" data-year="2026">
-        <div class="ph" style="background-image: url('uploads/UGA_0688.jpg');"></div>
-        <span class="badge">Foto</span>
-        <div class="veil"></div>
-      </article>
+      <!-- Generated dynamically by script below -->
     </div>
   </div>
 </section>
@@ -239,6 +174,180 @@
 
 <!-- Grain overlay -->
 <div class="grain" id="grain"></div>
+
+<!-- Dynamically populate items before loading main.js -->
+<script>
+(function() {
+  const filenames = [
+    "01 Sposi_audio.mov",
+    "20260407_172307.jpg",
+    "COLLAGE 1.jpg",
+    "COLLAGE 2.jpg",
+    "C_0895.jpg",
+    "C_0934.jpg",
+    "D_1034.jpg",
+    "D_1173.jpg",
+    "D_1245.jpg",
+    "D_1267.jpg",
+    "D_1298.jpg",
+    "MA_0175.jpg",
+    "MA_0220.jpg",
+    "UGA_0050.jpg",
+    "UGA_0054.jpg",
+    "UGA_0056.jpg",
+    "UGA_0073.jpg",
+    "UGA_0074.jpg",
+    "UGA_0101.jpg",
+    "UGA_0116.jpg",
+    "UGA_0120.jpg",
+    "UGA_0122.jpg",
+    "UGA_0138.jpg",
+    "UGA_0141.jpg",
+    "UGA_0145.jpg",
+    "UGA_0156.jpg",
+    "UGA_0157.jpg",
+    "UGA_0169.jpg",
+    "UGA_0178.jpg",
+    "UGA_0194.jpg",
+    "UGA_0211.jpg",
+    "UGA_0212.jpg",
+    "UGA_0216.jpg",
+    "UGA_0220.jpg",
+    "UGA_0226.jpg",
+    "UGA_0237.jpg",
+    "UGA_0259.jpg",
+    "UGA_0300.jpg",
+    "UGA_0305.jpg",
+    "UGA_0375.jpg",
+    "UGA_0400.jpg",
+    "UGA_0401-2.jpg",
+    "UGA_0450.jpg",
+    "UGA_0462.jpg",
+    "UGA_0475.jpg",
+    "UGA_0487.jpg",
+    "UGA_0490.jpg",
+    "UGA_0494.jpg",
+    "UGA_0497.jpg",
+    "UGA_0514.jpg",
+    "UGA_0516.jpg",
+    "UGA_0527.jpg",
+    "UGA_0621.jpg",
+    "UGA_0623.jpg",
+    "UGA_0629.jpg",
+    "UGA_0631.jpg",
+    "UGA_0647.jpg",
+    "UGA_0688.jpg",
+    "UGA_0694.jpg",
+    "UGA_0711-2.jpg",
+    "UGA_0731.jpg",
+    "UGA_0746.jpg",
+    "UGA_0747.jpg",
+    "UGA_0777.jpg",
+    "UGA_0780.jpg",
+    "UGA_0786.jpg",
+    "UGA_0803.jpg",
+    "UGA_0813.jpg",
+    "UGA_0815.jpg",
+    "UGA_0818.jpg",
+    "UGA_0819.jpg",
+    "UGA_0841.jpg",
+    "UGA_0847.jpg",
+    "UGA_0848-2.jpg",
+    "UGA_0848.jpg",
+    "UGA_0852-2.jpg",
+    "UGA_0860.jpg",
+    "UGA_0864.jpg",
+    "UGA_0873.jpg",
+    "UGA_0885.jpg",
+    "UGA_0886.jpg",
+    "UGA_0895.jpg",
+    "UGA_0908.jpg",
+    "UGA_0916.jpg",
+    "UGA_8476.jpg",
+    "UGA_8517.jpg",
+    "UGA_8520.jpg",
+    "UGA_8588.jpg"
+  ];
+
+  const gridContainer = document.getElementById('grid');
+  if (!gridContainer) return;
+
+  const items = filenames.map((file, index) => {
+    const isVideo = file.toLowerCase().endsWith('.mov') || file.toLowerCase().endsWith('.mp4') || file.toLowerCase().endsWith('.webm');
+    const type = isVideo ? 'video' : 'foto';
+    
+    // Categorize as engagement if filename matches typical engagement numbers, else wedding
+    let category = 'wedding';
+    const engPatterns = ["UGA_0073", "UGA_0074", "UGA_0194", "UGA_0621", "UGA_0623", "UGA_0629", "UGA_0813", "UGA_0815", "UGA_0818", "UGA_0819"];
+    if (engPatterns.some(p => file.includes(p))) {
+      category = 'engagement';
+    }
+    
+    // Cycle sizes cleanly to make beautiful rows of 12 columns
+    const pattern = [
+      "s-4", "s-4", "s-4", // 12
+      "s-7", "s-5",        // 12
+      "s-3", "s-3", "s-6", // 12
+      "s-12",              // 12
+      "s-6", "s-6",        // 12
+      "s-3", "s-6", "s-3"  // 12
+    ];
+    const size = isVideo ? 's-5' : pattern[index % pattern.length];
+    
+    let badge = 'Foto';
+    if (isVideo) {
+      badge = 'Film 04:32';
+    } else if (category === 'engagement') {
+      badge = 'Engagement';
+    }
+    
+    // Safe image background (video can't be loaded as CSS background)
+    let bgUrl = 'uploads/' + file;
+    if (isVideo) {
+      bgUrl = 'uploads/D_1173.jpg'; // static placeholder thumbnail for video
+    }
+    
+    return {
+      url: 'uploads/' + file,
+      bgUrl: bgUrl,
+      tags: `${type} ${category}`,
+      size: size,
+      badge: badge,
+      isVideo: isVideo
+    };
+  });
+
+  // Render cards
+  items.forEach(item => {
+    const article = document.createElement('article');
+    article.className = `card ${item.size} ${item.isVideo ? 'video' : ''}`;
+    article.setAttribute('data-tags', item.tags);
+    if (item.isVideo) {
+      article.setAttribute('data-video', item.url);
+    }
+    
+    article.innerHTML = `
+      <div class="ph" style="background-image: url('${item.bgUrl}');"></div>
+      <span class="badge ${item.isVideo ? 'video' : ''}">${item.badge}</span>
+      <div class="veil"></div>
+    `;
+    gridContainer.appendChild(article);
+  });
+
+  // Calculate & update filter counts
+  const countAll = items.length;
+  const countFoto = items.filter(i => !i.isVideo).length;
+  const countVideo = items.filter(i => i.isVideo).length;
+  const countWedding = items.filter(i => i.tags.includes('wedding')).length;
+  const countEngagement = items.filter(i => i.tags.includes('engagement')).length;
+
+  document.getElementById('count-all').textContent = String(countAll).padStart(2, '0');
+  document.getElementById('count-foto').textContent = String(countFoto).padStart(2, '0');
+  document.getElementById('count-video').textContent = String(countVideo).padStart(2, '0');
+  document.getElementById('count-wedding').textContent = String(countWedding).padStart(2, '0');
+  document.getElementById('count-engagement').textContent = String(countEngagement).padStart(2, '0');
+})();
+</script>
 
 <!-- Main interactions -->
 <script src="main.js"></script>
