@@ -148,9 +148,24 @@
             lbVideoContainer.appendChild(iframe);
           } else {
             const video = document.createElement('video');
-            video.src = embed.url;
             video.controls = true;
             video.autoplay = true;
+            video.playsInline = true;
+            video.style.maxWidth = '100%';
+            video.style.maxHeight = '100%';
+
+            const source = document.createElement('source');
+            source.src = embed.url;
+
+            const lowerUrl = embed.url.toLowerCase();
+            if (lowerUrl.endsWith('.mov')) {
+              source.type = 'video/quicktime';
+            } else if (lowerUrl.endsWith('.mp4')) {
+              source.type = 'video/mp4';
+            } else if (lowerUrl.endsWith('.webm')) {
+              source.type = 'video/webm';
+            }
+            video.appendChild(source);
             lbVideoContainer.appendChild(video);
           }
         }

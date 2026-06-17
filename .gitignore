@@ -12,3 +12,8 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
+
+# Media files (ignore large video files to avoid GitHub 100MB limit)
+uploads/*.mov
+uploads/*.mp4
+uploads/*.webm
